@@ -1,1 +1,1 @@
-# aicovidvn115m
+# AICovidVN115m - Giải pháp Hạng 3 vòng Về đích (AUC 0.92)

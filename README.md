@@ -129,7 +129,7 @@ Kết quả xuất ra có màu từ xanh lục rồi dần dần đến đỏ tu
 
 ## 7. Lời cảm ơn
 
-Xin gửi lời cảm ơn đến những người đã lập nên dự án cộng đồng AICovidVN để tổ chức cuộc thi này. Đây không chỉ là sân chơi cho chúng tôi, những sinh viên đại học, có cơ hội được áp dụng những kiến thức đã học mà còn giúp chung tôi học thêm được nhiều điều mới.  
+Xin gửi lời cảm ơn đến những người đã lập nên dự án cộng đồng AICovidVN để tổ chức cuộc thi này. Đây không chỉ là sân chơi cho chúng tôi, những sinh viên đại học, có cơ hội được áp dụng những kiến thức đã học mà còn được học thêm được nhiều điều mới.  
 Ngoài khía cạnh kỹ thuật, cuộc thi cũng đòi hỏi chúng tôi phải tìm hiểu thêm về COVID-19, nhờ đó mà chúng tôi đã có thêm những hiểu biết rõ ràng về dịch bệnh đang diễn ra trên toàn thế giới.  
 Mục đích cuộc thi nhằm xây dựng một giải pháp giúp cho việc chẩn đoán COVID-19, chúng tôi hy vọng rằng cũng đã đóng góp ít nhiều cho mục đích cao cả này và mong sẽ sớm được thấy những giải pháp trí tuệ nhân tạo được đưa vào áp dụng thực tế.
 

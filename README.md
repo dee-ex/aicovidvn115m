@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 Giả sử bạn sử dụng Google Colab, việc cài đặt thư viện là không cần thiết. Còn nếu trong trường hợp bạn sử dụng môi trường máy cá nhân, chúng tôi khuyến khích tạo và sử dụng riêng môi trường ảo hoá của Python để đảm bảo độc lập, tránh xung đột với môi trường sẵn có.
 
-Trong `requirements.txt` cũng đã có những thư viện hỗ trợ chạy API là Django và một số thư viện hỗ trợ liên quan, nên sau khi cài đặt bạn hoàn toàn có thể sử dụng API.   Riêng về phần frontend, bạn cần phải cài đặt môi trường Node.js https://nodejs.org/en/download/. Tiếp đến là sử dụng câu lệnh cài đặt để có thể dựng được máy chủ frontend:
+Trong `requirements.txt` cũng đã có những thư viện hỗ trợ chạy API là Django và một số thư viện hỗ trợ liên quan, nên sau khi cài đặt bạn hoàn toàn có thể sử dụng API.   Riêng về phần frontend thì bạn hoàn toàn có thể bỏ qua nếu thấy không cần thiết, trong trường hợp ngược lại, bạn cần cài đặt môi trường Node.js https://nodejs.org/en/download/. Tiếp đến là sử dụng câu lệnh cài đặt để có thể dựng được máy chủ frontend:
 ```
 npm i
 ```

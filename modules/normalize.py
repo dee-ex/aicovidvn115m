@@ -1,16 +1,16 @@
-import pandas as pd
+import joblib
 import numpy as np
+import pandas as pd
 
 from sklearn.preprocessing import MinMaxScaler
 
 # ==============================================================================
 
-def scale(x, x_private):
+def scale(x, x_private, name):
     scaler = MinMaxScaler()
     scaler.fit(x)
 
-    print(scaler.data_max_)
-    print(scaler.data_min_)
+    joblib.dump(scaler, f"../weights/scalers/scaler_{name}.save")
 
     nor_x = scaler.transform(x)
     nor_x_private = scaler.transform(x_private)
@@ -52,10 +52,10 @@ def normalize():
 
     # ==============================================================================
 
-    nor_mfcc, nor_mfcc_private = scale(raw_mfcc, raw_mfcc_private)
-    nor_chroma, nor_chroma_private = scale(raw_chroma, raw_chroma_private)
-    nor_mel, nor_mel_private = scale(raw_mel, raw_mel_private)
-    nor_zcr, nor_zcr_private = scale(raw_zcr, raw_zcr_private)
+    nor_mfcc, nor_mfcc_private = scale(raw_mfcc, raw_mfcc_private, "mfcc")
+    nor_chroma, nor_chroma_private = scale(raw_chroma, raw_chroma_private, "chroma")
+    nor_mel, nor_mel_private = scale(raw_mel, raw_mel_private, "mel")
+    nor_zcr, nor_zcr_private = scale(raw_zcr, raw_zcr_private, "zcr")
 
     # ==============================================================================
 

@@ -72,7 +72,7 @@ def train():
                               valid_names=("train", "valid"),
                               verbose_eval = 100)
 
-            f = open(f"../weights/model_{seed + 1}_{f + 1}.pkl", "wb")
+            f = open(f"../weights/models/model_{seed + 1}_{f + 1}.pkl", "wb")
             pickle.dump(model, f)
             f.close()
 

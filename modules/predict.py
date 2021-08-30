@@ -25,10 +25,10 @@ def predict():
 
     res = np.zeros(X_test.shape[0])
 
-    model_list = os.listdir("../weights/")
+    model_list = os.listdir("../weights/models/")
 
     for name in model_list:
-        model = pickle.load(open("../weights/" + name, "rb"))
+        model = pickle.load(open("../weights/models/" + name, "rb"))
 
         res += model.predict(X_test)
 

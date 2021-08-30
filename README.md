@@ -118,7 +118,7 @@ npm run serve
 ```
 
 Địa chỉ mà máy chủ được dựng lên mặc định sẽ là http://localhost:8080/. Một tính năng thú vị của npm là sẽ giúp bạn xây dựng thêm một địa chỉ mạng (network) bằng địa chỉ IP địa phương (local IP) và với cổng 8080 tương ứng. Địa chỉ này sẽ được thông báo ra cửa sổ dòng lệnh sau khi máy chủ được biên dịch xong.  
-Địa chỉ API mà frontend được cài đặt là giống như mặc định của địa chỉ máy chú API, đảm bảo rằng nếu bạn thay đổi địa chỉ máy chủ API thì cũng phải đồng bộ địa chỉ mà frontend sử dụng ở trong `src/frontend/src/App.vue`, dòng 72.  
+Địa chỉ API mà frontend được cài đặt là giống như mặc định của địa chỉ máy chú API, đảm bảo rằng nếu bạn thay đổi địa chỉ máy chủ API thì cũng phải đồng bộ địa chỉ mà frontend sử dụng ở trong `src/frontend/src/App.vue`, dòng 74.  
 
 Giao diện chúng tôi xây dựng cũng khá đơn giản, hy vọng sẽ không làm khó bạn trong khi sử dụng. Kết quả thực thi mỗi lần khoảng dưới 15 giây với cấu hình máy trung bình hiện nay.
 

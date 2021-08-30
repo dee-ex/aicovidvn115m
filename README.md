@@ -3,9 +3,9 @@
 Cuộc thi "AICV-115M Challenge" là một cuộc thi về nhận diện Covid19 qua tiếng ho với tổng giải thưởng 115 triệu VND với 168 cá nhân tham gia.  
 Chúng tôi - nhóm `đi thi` đã đạt được Hạng 3 với điểm (tính bằng AUC) là 0.92 (chính xác hơn là 0.921527). Vậy nên, chúng tôi mong repository này sẽ cung cấp một cái nhìn rõ ràng hơn về giải pháp mà chúng tôi đã triển khai, cũng như là một sự tham khảo cho những người muốn quan tâm. Những ý kiến đóng góp sẽ luôn được chúng tôi đón nhận.
 
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/images/score.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/score.jpg" width="1000"></p>
 <p align="center"><i>Hình 1. Điểm số cao nhất đạt được của nhóm (AUC 0.921527)</i></p>
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/images/ranking.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/ranking.jpg" width="1000"></p>
 <p align="center"><i>Hình 2. Nhóm `đi thi` đạt Hạng 3 chung cuộc (thua 2 nhóm đầu xấp xỉ 0.01)</i></p>
 
 ## Môi trường và Những thư viện cần thiết

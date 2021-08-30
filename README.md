@@ -1,7 +1,7 @@
 # AICovidVN115m - Giải pháp đạt Hạng 3 vòng Về đích (AUC 0.92)
 
 Cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)" là một cuộc thi về nhận diện Covid19 qua tiếng ho với tổng giải thưởng 115 triệu VND với 168 cá nhân tham gia.  
-Chúng tôi - nhóm `đi thi` đã đạt được **Hạng 3** với điểm (tính bằng AUC) là **0.92** (chính xác hơn là 0.921527). Vậy nên, chúng tôi mong repository này sẽ cung cấp một nguồn tham khảo về giải pháp mà chúng tôi đã triển khai, cũng như là một sự tham khảo cho những người muốn quan tâm. Để đào sâu vào chi tiết, bạn có thể tham khảo báo cáo kỹ thuật, slide và video thuyết trình trong thư mục `reports/`. Những ý kiến đóng góp sẽ luôn được chúng tôi đón nhận.
+Chúng tôi - nhóm `đi thi` đã đạt được **Hạng 3** với điểm (tính bằng AUC) là **0.92** (chính xác hơn là 0.921527). Vậy nên, chúng tôi mong repository này sẽ cung cấp một cái nhìn rõ về giải pháp mà chúng tôi đã triển khai, cũng như là một sự tham khảo cho những người muốn quan tâm. Để đào sâu vào chi tiết, bạn có thể xem thêm báo cáo kỹ thuật, slide và video thuyết trình trong thư mục `reports/`. Những ý kiến đóng góp sẽ luôn được chúng tôi đón nhận.
 
 <p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/score.jpg" width="1000"></p>
 <p align="center"><i>Hình 1. Điểm số cao nhất đạt được của nhóm (AUC 0.921527)</i></p>

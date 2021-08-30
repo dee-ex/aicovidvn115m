@@ -3,9 +3,9 @@
 Cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)" là một cuộc thi về nhận diện Covid19 qua tiếng ho với tổng giải thưởng 115 triệu VND với 168 cá nhân tham gia.  
 Chúng tôi - nhóm `đi thi` đã đạt được **Hạng 3** với điểm (tính bằng AUC) là **0.92** (chính xác hơn là 0.921527). Vậy nên, chúng tôi mong repository này sẽ cung cấp một nguồn tham khảo về giải pháp mà chúng tôi đã triển khai, cũng như là một sự tham khảo cho những người muốn quan tâm. Để đào sâu vào chi tiết, bạn có thể tham khảo báo cáo kỹ thuật, slide và video thuyết trình trong thư mục `reports/`. Những ý kiến đóng góp sẽ luôn được chúng tôi đón nhận.
 
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/score.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/score.jpg" width="1000"></p>
 <p align="center"><i>Hình 1. Điểm số cao nhất đạt được của nhóm (AUC 0.921527)</i></p>
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/ranking.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/ranking.jpg" width="1000"></p>
 <p align="center"><i>Hình 2. Nhóm "đi thi" đạt Hạng 3 chung cuộc (thua 2 nhóm đầu xấp xỉ 0.01)</i></p>
 
 ## 1. Môi trường và Những thư viện cần thiết
@@ -106,7 +106,7 @@ Máy chủ mặc định sẽ được dựng ở địa chỉ IP loopback `127.
 }
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/api.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/api.jpg" width="1000"></p>
 <p align="center"><i>Hình 3. Thử nghiệm API trên phần mềm Postman</i></p>
 
 ## 6. Frontend
@@ -122,7 +122,7 @@ npm run serve
 
 Giao diện chúng tôi xây dựng cũng khá đơn giản, hy vọng sẽ không làm khó bạn trong khi sử dụng. Kết quả thực thi mỗi lần khoảng dưới 15 giây với cấu hình máy trung bình hiện nay.
 
-<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/frontend.jpg" width="1000"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/frontend.jpg" width="1000"></p>
 <p align="center"><i>Hình 4. Thử nghiệm frontend</i></p>
 
 Kết quả xuất ra có màu từ xanh lục rồi dần dần đến đỏ tuỳ theo xác suất trả về. Nếu là màu đỏ, khả năng cao là bạn phải đi cách ly. Chúng tôi mong rằng mẫu thử nghiệm của bạn sẽ hiện ra màu xanh như trong Hình 4.

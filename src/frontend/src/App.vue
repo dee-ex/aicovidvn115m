@@ -26,7 +26,7 @@
       <div id="right">
         <h2 style="color: white">
           Xác suất dương tính là:
-          <span v-if="res" v-bind:class="{low: low, mid: mid, high: high}">{{ res }}</span>
+          <span v-if="res" v-bind:class="{low: low, low_mid: low_mid, mid: mid, mid_high: mid_high, high: high}">{{ res }}</span>
         </h2>
       </div>
   </div>
@@ -45,7 +45,9 @@ export default {
       res: null,
       fd: null,
       low: null,
+      low_mid: null,
       mid: null,
+      mid_high: null,
       high: null,
     }
   },
@@ -73,19 +75,39 @@ export default {
       .then(response => response.json())
       .then(data => {
         this.res = data["prob"]
-        if (.2 - this.res >= 1e-9) {
+        if (.3 - this.res >= 1e-9) {
           this.low = true;
+          this.low_mid = false
           this.mid = false;
+          this.mid_high = false;
           this.high = false
-        } else if (.7 - this.res >= 1e-9) {
+        } else if (.5 - this.res > 1e-9) {
           this.low = false;
+          this.low_mid = true;
+          this.mid = false;
+          this.mid_high = false;
+          this.high = false;
+        } 
+        else if (.7 - this.res >= 1e-9) {
+          this.low = false;
+          this.low_mid = false;
           this.mid = true;
+          this.mid_high = false;
+          this.high = false;
+        } else if (.8 - this.res >= 1e-9) {
+          this.low = false;
+          this.low_mid = false;
+          this.mid = false;
+          this.mid_high = true
           this.high = false;
         } else {
           this.low = false;
+          this.low_mid = false;
           this.mid = false;
+          this.mid_high = false;
           this.high = true;
         }
+
         this.isLoaded = true;
       });
     },
@@ -244,13 +266,25 @@ div {
 }
 
 .low {
-    color: #00ff37;
+    color: #00ff55;
+    display: block;
+    margin: 10px 10px;
+}
+
+.low_mid {
+    color: #66f706;
     display: block;
     margin: 10px 10px;
 }
 
 .mid {
     color: #fffb00;
+    display: block;
+    margin: 10px 10px;
+}
+
+.mid_high {
+    color: #ff7b00;
     display: block;
     margin: 10px 10px;
 }

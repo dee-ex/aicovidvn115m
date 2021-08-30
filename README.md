@@ -1,12 +1,12 @@
 # AICovidVN115m - Giải pháp đạt Hạng 3 vòng Về đích (AUC 0.92)
 
-Cuộc thi "AICV-115M Challenge" là một cuộc thi về nhận diện Covid19 qua tiếng ho với tổng giải thưởng 115 triệu VND với 168 cá nhân tham gia.  
+Cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)" là một cuộc thi về nhận diện Covid19 qua tiếng ho với tổng giải thưởng 115 triệu VND với 168 cá nhân tham gia.  
 Chúng tôi - nhóm `đi thi` đã đạt được Hạng 3 với điểm (tính bằng AUC) là 0.92 (chính xác hơn là 0.921527). Vậy nên, chúng tôi mong repository này sẽ cung cấp một cái nhìn rõ ràng hơn về giải pháp mà chúng tôi đã triển khai, cũng như là một sự tham khảo cho những người muốn quan tâm. Những ý kiến đóng góp sẽ luôn được chúng tôi đón nhận.
 
 <p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/score.jpg" width="1000"></p>
 <p align="center"><i>Hình 1. Điểm số cao nhất đạt được của nhóm (AUC 0.921527)</i></p>
 <p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/ranking.jpg" width="1000"></p>
-<p align="center"><i>Hình 2. Nhóm `đi thi` đạt Hạng 3 chung cuộc (thua 2 nhóm đầu xấp xỉ 0.01)</i></p>
+<p align="center"><i>Hình 2. Nhóm "đi thi" đạt Hạng 3 chung cuộc (thua 2 nhóm đầu xấp xỉ 0.01)</i></p>
 
 ## Môi trường và Những thư viện cần thiết
 
@@ -17,13 +17,19 @@ Về phần thư viện, chúng tôi đã ghi chú ở trong tệp tin `requirem
 pip install -r requirements.txt
 ```
 
-Giả sử bạn sử dụng Google Colab, việc cài đặt thư viện là không cần thiết. Còn nếu trong trường hợp bạn sử dụng môi trường máy cá nhân, chúng tôi khuyến khích tạo và sử dụng riêng môi trường ảo hoá của Python để đảm bảo độc lộp, tránh xung lập với môi trường sẵn có.
+Giả sử bạn sử dụng Google Colab, việc cài đặt thư viện là không cần thiết. Còn nếu trong trường hợp bạn sử dụng môi trường máy cá nhân, chúng tôi khuyến khích tạo và sử dụng riêng môi trường ảo hoá của Python để đảm bảo độc lập, tránh xung đột với môi trường sẵn có.
+
+Trong `requirements.txt` cũng đã có những thư viện hỗ trợ chạy API là Django và một số thư viện hỗ trợ liên quan, nên sau khi cài đặt bạn hoàn toàn có thể sử dụng API.   Riêng về phần frontend, bạn cần phải cài đặt môi trường Node.js https://nodejs.org/en/download/. Tiếp đến là sử dụng câu lệnh cài đặt để có thể dựng được máy chủ frontend:
+```
+npm i
+```
 
 ## Cấu trúc chính của repository
 
 ```
 aicovidvn115m
 │   LICENSE
+|   main.py
 │   README.md
 │   requirements.txt
 |   submission.ipynb
@@ -35,13 +41,22 @@ aicovidvn115m
 |   |   train/ - 4505 mẫu dữ liệu huấn luyện
 |   |   train_features/ - lưu trữ những đặc trưng được trích lọc từ train/
 |   |   ...
-└───modules/ - tất cả những mã nguồn sử dụng
+└───modules/ - tất cả những mã nguồn đã sử dụng để xây dựng mô hình
 |   |   __init__.py
 │   │   ...
 │
-└───weights/ - mô hình đã được huấn luyện
-│   │   model_10_1.pkl
+└───report/ - báo cáo kỹ thuật và những hình ảnh liên quan
+|   |   report.pdf
+|   |   ranking.jpg
 │   │   ...
+│
+└───src/ - mã nguồn cho api backend và frontend
+│   └───backend/- lưu trữ api
+|   |   |   manage.py - tệp tin thực thi để dựng máy chủ backend
+│   |   frontend/ - lưu trữ frontend
+└───weights/ - mô hình đã được huấn luyện
+│   │   modles/ - lưu trữ 100 mô hình đã được huấn luyện
+│   │   scalers/ - lưu trữ 4 scaler dùng để chuẩn hoá dữ liệu
 │
 ```
 
@@ -53,7 +68,7 @@ aicovidvn115m
 ```
 python train.py
 ```
-Lưu ý: khi huấn luyện, các mô hình sẽ được lưu ở thư mục `weigths/`, để chắc chắn những mô hình này không bị ảnh hưởng, bạn có thể lưu trữ những mô hình này ở nơi khác hoặc thay đổi đường dẫn lưu trữ trong tệp tin `modules/train.py`.
+Lưu ý: khi huấn luyện, các mô hình sẽ được lưu ở thư mục `weigths/models/`, để chắc chắn những mô hình huấn luyện không ghi đè lên những mô hình đã được huấn luyện của chúng tôi, bạn có thể lưu trữ những mô hình đã có ở nơi khác hoặc thay đổi đường dẫn lưu trữ mô hình trong tệp tin mã nguồn `modules/train.py`.
 
 ### Dự đoán
 
@@ -62,7 +77,50 @@ Cũng trong thư mục `modules`, sử dụng câu lệnh:
 python predict.py
 ```
 
-Kết quả sẽ được ghi ra ở tệp tin `modules/results.csv`. Tệp tin `modules/results.csv` là kết quả mà chúng tôi đã sử dụng giúp đạt được thứ hạng trong cuộc thi.
+Kết quả sẽ được ghi ra ở tệp tin `modules/results.csv`. Tệp tin `modules/results.csv` có sẵn là kết quả mà chúng tôi đã sử dụng giúp đạt được thứ hạng trong cuộc thi.
+
+## Sử dụng
+
+Bạn có thể sử dụng mô hình của chúng tôi ở đường dẫn chính bằng việc thực thi tệp tin `main.py`.
+```
+python main.py -f audio_file_name
+```
+
+`audio_file_name` có thể là tên hoặc đường dẫn của một tệp tin âm thanh, định dạng tệp tin `.wav` là một lợi thế.
+
+## API
+
+Chúng tôi xây dựng một API đơn giản với khung Django. Các bạn có thể dựng máy chủ API này bằng cách thực thi lệnh sau ở thu mục `src/backend/`:
+```
+python manage.py runserver
+```
+Máy chủ mặc định sẽ được dựng ở địa chỉ IP loopback `127.0.0.1`, cổng `8000` (http://127.0.0.1.8000/). Thông thường các máy hiện nay sẽ có loopback là `localhost`, nên các bạn có thể thay thế địa chỉ IP trên với từ khoá `localhost`.  
+Đường dẫn (endpoint) để sử dụng API được chúng tôi cài đặt tại đường dẫn `/api/predict/` với phương thức POST. Để cho đơn giản, chúng tôi đã tắt hết những yếu tố bảo mật như CSRF, CORS. Tệp tin âm thanh gửi qua theo dạng biểu mẫu (form) với tên `"audio"`. Kết quả trả về có định dạng JSON như sau.
+```
+{
+    "prob": 0.123456789
+}
+```
+
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/api.jpg" width="1000"></p>
+<p align="center"><i>Hình 3. Thử nghiệm API trên phần mềm Postman</i></p>
+
+## Frontend
+
+Dựng máy chủ frontend bằng cách thực thi dòng lệnh sau ở trong thư mục `src/frontend/`:
+```
+npm run serve
+```
+
+Địa chỉ mà máy chủ được dựng lên mặc định sẽ là http://localhost:8080/. Một tính năng hay ho của npm là sẽ giúp bạn xây dựng thêm một địa chỉ mạng (network) bằng địa chỉ IP địa phương (local IP) và với cổng 8080 tương ứng. Địa chỉ này sẽ được thông báo ra cửa sổ dòng lệnh sau khi máy chủ được biên dịch xong.  
+Địa chỉ API mà frontend được cài đặt là giống như mặc định của địa chỉ máy chú API, đảm bảo rằng nếu bạn thay đổi địa chỉ máy chủ API thì cũng phải đồng bộ địa chỉ mà frontend sử dụng ở trong `src/frontend/src/App.vue`, dòng 72.  
+
+Giao diện chúng tôi xây dựng cũng khá đơn giản, hy vọng sẽ không làm khó bạn trong khi sử dụng. Kết quả thực thi mỗi lần khoảng dưới 15 giây với cấu hình máy trung bình hiện nay.
+
+<p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/report/frontend.jpg" width="1000"></p>
+<p align="center"><i>Hình 4. Thử nghiệm frontend</i></p>
+
+Kết quả xuất ra sẽ có 3 màu lục, cam, đỏ tuỳ theo xác suất trả về. Nếu là màu đỏ, khả năng cao là bạn phải đi cách ly. Chúng tôi mong rằng mẫu thử nghiệm của bạn sẽ hiện ra màu xanh như trong Hình 4.
 
 ## Lời cảm ơn
 
@@ -72,4 +130,4 @@ Mục đích cuộc thi nhằm xây dựng một giải pháp giúp cho việc c
 
 ## Giấy phép
 
-MIT
+[MIT](https://github.com/dee-ex/aicovidvn115m/blob/main/LICENSE)

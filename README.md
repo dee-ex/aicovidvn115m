@@ -10,7 +10,7 @@ Chúng tôi - nhóm `đi thi` đã đạt được **Hạng 3** với điểm (t
 
 ## 1. Môi trường và Những thư viện cần thiết
 
-Môi trường cần thiết là Python 3.X, bạn có thể dễ dàng cài đặt theo trang thủ https://www.python.org/ (nếu cần thiết) hoặc có thể sử dụng những nơi tích hợp sẵn như https://colab.research.google.com/.
+Môi trường cần thiết là Python 3.X, bạn có thể dễ dàng cài đặt theo trang chủ https://www.python.org/ (nếu cần thiết) hoặc có thể sử dụng những nơi tích hợp sẵn như https://colab.research.google.com/.
 
 Về phần thư viện, chúng tôi đã ghi chú ở trong tệp tin `requirements.txt`. Nếu bạn muốn cài đặt nhanh gọn, có thể sử dụng câu lệnh ở trên cửa sổ dòng lệnh (Command Prompt, Terminal, ...).
 ```

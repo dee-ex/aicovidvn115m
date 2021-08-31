@@ -8,6 +8,19 @@ Chúng tôi - nhóm `đi thi` đã đạt được **Hạng 3** với điểm (t
 <p align="center"><img src="https://raw.githubusercontent.com/dee-ex/aicovidvn115m/main/reports/ranking.jpg" width="1000"></p>
 <p align="center"><i>Hình 2. Nhóm "đi thi" đạt Hạng 3 chung cuộc (thua 2 nhóm đầu xấp xỉ 0.01)</i></p>
 
+## Nội dung
+* [1. Môi trường và Những thư viện cần thiết](#1-môi-trường-và-những-thư-viện-cần-thiết)
+* [2. Cấu trúc chính của repository](#2-cấu-trúc-chính-của-repository)
+* [3. Huấn luyện và Dự đoán](#3-huấn-luyện-và-dự-đoán)
+    * [3.1 Huấn luyện](#31-huấn-luyện)
+    * [3.2 Dự đoán](#32-dự-đoán)
+* [4. Sử dụng trực tiếp](#4-sử-dụng-trực-tiếp)
+* [5. API](#5-api)
+* [6. Frontend](#6-frontend)
+* [7. Lời cảm ơn](#7-lời-cảm-ơn)
+* [8. Bản quyền tập dữ liệu](#8-bản-quyền-tập-dữ-liệu)
+* [9. Giấy phép](#9-giấy-phép)
+
 ## 1. Môi trường và Những thư viện cần thiết
 
 Môi trường cần thiết là Python 3.X, bạn có thể dễ dàng cài đặt theo trang chủ https://www.python.org/ (nếu cần thiết) hoặc có thể sử dụng những nơi tích hợp sẵn như https://colab.research.google.com/.
@@ -89,7 +102,7 @@ Bạn có thể sử dụng mô hình của chúng tôi ở đường dẫn chí
 python main.py -f audio_file_name
 ```
 
-`audio_file_name` có thể là tên hoặc đường dẫn của một tệp tin âm thanh. Định dạng yêu cầu của tệp tin là `.wav`, bạn vui lòng dùng các công cụ chuyển đổi để đưa về định dạng phù hợp.
+`audio_file_name` có thể là tên hoặc đường dẫn của một tệp tin âm thanh. Định dạng yêu cầu của tệp tin là `.wav`, bạn cần dùng các công cụ chuyển đổi để đưa về định dạng phù hợp.
 
 ## 5. API
 
@@ -133,6 +146,10 @@ Xin gửi lời cảm ơn đến những người đã lập nên dự án cộn
 Ngoài khía cạnh kỹ thuật, cuộc thi cũng đòi hỏi chúng tôi phải tìm hiểu thêm về COVID-19, nhờ đó mà chúng tôi đã có thêm những hiểu biết rõ ràng về dịch bệnh đang diễn ra trên toàn thế giới.  
 Mục đích cuộc thi nhằm xây dựng một giải pháp giúp cho việc chẩn đoán COVID-19, chúng tôi hy vọng rằng cũng đã đóng góp ít nhiều cho mục đích cao cả này và mong sẽ sớm được thấy những giải pháp trí tuệ nhân tạo được đưa vào áp dụng thực tế.
 
-## 8. Giấy phép
+## 8. Bản quyền tập dữ liệu
 
-[MIT](https://github.com/dee-ex/aicovidvn115m/blob/main/LICENSE)
+Toàn bộ dữ liệu ở trong thư mục `data/` thuộc sở hữu cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)", vui lòng liên hệ BTC của cuộc thi nếu muốn sử dụng cho mục đích khác.
+
+## 9. Giấy phép
+
+[MIT](https://github.com/dee-ex/aicovidvn115m/blob/main/LICENSE).

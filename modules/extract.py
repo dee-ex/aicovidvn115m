@@ -74,10 +74,10 @@ def extract():
     mel_df_private["uuid"] = private_df["uuid"]
     zcr_df_private["uuid"] = private_df["uuid"]
 
-    mfcc_df_private.to_csv("private_features/mfcc_features.csv", index=False)
-    chroma_df_private.to_csv("private_features/chroma_features.csv", index=False)
-    mel_df_private.to_csv("private_features/mel_features.csv", index=False)
-    zcr_df_private.to_csv("private_features/zcr_features.csv", index=False)
+    mfcc_df_private.to_csv("../data/private_features/mfcc_features.csv", index=False)
+    chroma_df_private.to_csv("../data/private_features/chroma_features.csv", index=False)
+    mel_df_private.to_csv("../data/private_features/mel_features.csv", index=False)
+    zcr_df_private.to_csv("../data/private_features/zcr_features.csv", index=False)
 
 if __name__ == "__main__":
     extract()

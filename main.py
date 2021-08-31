@@ -42,5 +42,5 @@ if args.f:
 
     print(res)
 
-    if 0.7 - res >= 1e-9:
+    if 0.8 - res <= 1e-9:
         print("Di cach ly di ban oi!!!")

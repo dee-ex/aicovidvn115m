@@ -34,7 +34,7 @@ Giả sử bạn sử dụng Google Colab, việc cài đặt thư viện là kh
 Sau bước này, cơ bản là bạn đã có thể sử dụng được những mã nguồn cần thiết.
 
 Trong `requirements.txt` cũng đã có những thư viện hỗ trợ chạy API là Django và một số thư viện hỗ trợ liên quan, nên sau khi cài đặt bạn cũng hoàn toàn có thể thử nghiệm API.  
-Riêng về phần frontend thì bạn hoàn toàn có thể bỏ qua nếu thấy không cần thiết, trong trường hợp muốn sử dụng frontend, môi trường Node.js https://nodejs.org/en/download/ cần phải được cài đặt. Tiếp đến là cài đặt vue-cli cho việc biên dịch máy chủ:
+Riêng về phần frontend thì bạn hoàn toàn có thể bỏ qua nếu thấy không cần thiết, trong trường hợp muốn sử dụng frontend, môi trường Node.js (https://nodejs.org/en/download/) cần phải được cài đặt. Tiếp đến là cài đặt vue-cli cho việc biên dịch máy chủ:
 ```
 npm i
 ```
@@ -148,7 +148,7 @@ Mục đích cuộc thi nhằm xây dựng một giải pháp giúp cho việc c
 
 ## 8. Bản quyền tập dữ liệu
 
-Toàn bộ dữ liệu ở trong thư mục `data/` thuộc sở hữu cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)", vui lòng liên hệ BTC của cuộc thi nếu muốn sử dụng cho mục đích khác.
+Toàn bộ dữ liệu ở trong thư mục `data/` thuộc sở hữu của cuộc thi "[AICV-115M Challenge](https://aihub.vn/competitions/22#learn_the_details)", nếu muốn sử dụng cho mục đích khác, bạn vui lòng đọc thêm thông tin ở [Terms and Conditions](https://aihub.vn/competitions/22#learn_the_details-terms_and_conditions) hoặc liên hệ trực tiếp BTC cuộc thi.
 
 ## 9. Giấy phép
 
